@@ -1,0 +1,264 @@
+/* Body and Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Banner (Header) */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #00ff00, #003300);
+  animation: gradient-bg 4s infinite alternate;
+  padding: 10px 20px;
+}
+
+@keyframes gradient-bg {
+  0% { background: linear-gradient(135deg, #00ff00, #003300); }
+  50% { background: linear-gradient(135deg, #00aa00, #001100); }
+  100% { background: linear-gradient(135deg, #00ff00, #003300); }
+}
+
+header a {
+  position: absolute;
+  left: 20px;
+}
+
+header .twitter-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.title-section {
+  text-align: center;
+}
+
+.title-section h1 {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 3em;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  animation: glow-text 2s infinite alternate;
+}
+
+@keyframes glow-text {
+  from { text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+  to { text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88; }
+}
+
+.title-section p {
+  font-family: 'Georgia', serif;
+  font-size: 1.2em;
+  color: #f0f0f0;
+}
+
+/* Main Section */
+main {
+  padding-top: 100px;
+}
+
+/* About Section */
+.about-section {
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 800px;
+  background: linear-gradient(135deg, #222, #333);
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  animation: slide-in 1.5s ease-out;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.about-section h2 {
+  font-family: 'Cursive', 'Georgia', serif;
+  font-size: 2.5em;
+  color: #00ff00;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #00ff00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #d1d1d1;
+  text-shadow: 1px 1px 2px #000;
+  transition: color 0.3s ease;
+}
+
+.about-section p:hover {
+  color: #00ff00;
+}
+
+/* Gallery Styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #00ff00;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px rgba(0, 255, 0, 0.6);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  position: relative;
+  text-align: center;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto; /* Permite a rolagem caso a imagem seja maior que a tela */
+}
+
+.lightbox img {
+  width: 100%; /* Redimensiona a imagem para 100% da largura do contêiner */
+  height: auto;
+  max-width: 100%; /* Impede que a imagem fique maior que a largura da tela */
+  max-height: 100vh; /* Impede que a imagem fique maior que a altura da tela */
+  margin: 0 auto;
+  display: block; /* Garante que a imagem ocupe toda a largura possível */
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.lightbox .close:hover {
+  transform: scale(1.2);
+  color: #00ff00;
+}
+
+.lightbox p {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Token Contract Section */
+.contract-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: linear-gradient(135deg, #222, #444);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.contract-section h2 {
+  margin-bottom: 10px;
+  color: #00ff00;
+}
+
+.contract-section p {
+  font-size: 1.2em;
+  word-break: break-word;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003300;
+  color: #fff;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #00ff00;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.modal-content .close {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8);
+}
+
+footer p {
+  font-size: 0.9em;
+  margin: 0;
+}
