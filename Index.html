@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK CAT WITH GREEN EYES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #121212, #1e1e1e);
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: linear-gradient(135deg, #00ff00, #003300);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        header .title-section {
+            flex: 1;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .logo {
+            margin-left: 20px;
+            width: 100px;
+            height: 60px;
+            background: radial-gradient(circle, #00ff00 50%, #000 60%);
+            border-radius: 50% 50% / 70% 70%;
+            box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+            position: relative;
+            animation: glow 2s infinite alternate;
+        }
+        .logo::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 45%;
+            width: 10px;
+            height: 50%;
+            background-color: #000;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+            }
+            to {
+                box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+            }
+        }
+        main {
+            padding: 30px;
+        }
+        .about-section h2 {
+            margin-bottom: 10px;
+            color: #00ff00;
+            font-family: 'Georgia', serif;
+            font-size: 2.2em;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #d1d1d1;
+            text-shadow: 1px 1px 2px #000;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .images-section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid #00ff00;
+            transition: transform 0.3s ease;
+        }
+        .images-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.6);
+        }
+        .contract-section {
+            background: linear-gradient(135deg, #222, #444);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        }
+        .contract-section h2 {
+            margin-bottom: 10px;
+            color: #00ff00;
+        }
+        .contract-section p {
+            font-size: 1.2em;
+            word-break: break-word;
+        }
+        footer {
+            background-color: #1e1e1e;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8);
+        }
+        footer p {
+            font-size: 0.9em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="title-section">
+            <h1>BLACK CAT WITH GREEN EYES</h1>
+            <p>The meme coin everyone is talking about!</p>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>About the Project</h2>
+            <p>
+                BLACK CAT WITH GREEN EYES $TBC is more than just a meme coin—it's a movement! 
+                Join us as we combine fun, community, and innovation. First we hit 1M Market Cap, 
+                next goal is 10M. United we can, united we are stronger. Go Black Cats, let’s make history!
+            </p>
+        </section>
+        <section class="images-section">
+            <h2>Gallery</h2>
+            <img src="black-cat1.jpg" alt="Black Cat with Green Eyes 1">
+            <img src="black-cat2.jpg" alt="Black Cat with Green Eyes 2">
+            <img src="black-cat3.jpg" alt="Black Cat with Green Eyes 3">
+        </section>
+        <section class="contract-section">
+            <h2>Token Contract</h2>
+            <p>0x1234567890ABCDEF1234567890ABCDEF12345678</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 BLACK CAT WITH GREEN EYES. All rights reserved.</p>
+    </footer>
+</body>
+</html>
