@@ -28,11 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const thumbnail = document.querySelector(".video-thumbnail");
     const modal = document.querySelector("#avatar-modal");
     const closeModal = modal.querySelector(".close-modal");
+    const closeThumbnailBtn = document.querySelector(".close-thumbnail");
   
-    thumbnail.addEventListener("click", () => {
-      modal.style.display = "flex";
+    // Abrir o modal ao clicar na miniatura
+    thumbnail.addEventListener("click", (e) => {
+      if (!e.target.classList.contains("close-thumbnail")) {
+        modal.style.display = "flex";
+      }
     });
   
+    // Fechar o modal ao clicar no botão de fechar
     closeModal.addEventListener("click", () => {
       modal.style.display = "none";
     });
@@ -41,6 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.target === modal) {
         modal.style.display = "none";
       }
+    });
+  
+    // Fechar a miniatura
+    closeThumbnailBtn.addEventListener("click", () => {
+      thumbnail.style.display = "none";
     });
   });
   
