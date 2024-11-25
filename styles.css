@@ -149,16 +149,16 @@ main {
   text-align: center;
   max-width: 90%;
   max-height: 90%;
-  overflow: auto; /* Permite a rolagem caso a imagem seja maior que a tela */
+  overflow: auto;
 }
 
 .lightbox img {
-  width: 100%; /* Redimensiona a imagem para 100% da largura do contêiner */
+  width: 100%;
   height: auto;
-  max-width: 100%; /* Impede que a imagem fique maior que a largura da tela */
-  max-height: 100vh; /* Impede que a imagem fique maior que a altura da tela */
+  max-width: 100%;
+  max-height: 100vh;
   margin: 0 auto;
-  display: block; /* Garante que a imagem ocupe toda a largura possível */
+  display: block;
 }
 
 .lightbox .close {
@@ -182,41 +182,26 @@ main {
   font-size: 1.2rem;
 }
 
-/* Token Contract Section */
-.contract-section {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 600px;
-  background: linear-gradient(135deg, #222, #444);
+/* Miniatura do Vídeo */
+.video-thumbnail {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  width: 120px;
+  height: auto;
+  border: 2px solid #00ff00;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-}
-
-.contract-section h2 {
-  margin-bottom: 10px;
-  color: #00ff00;
-}
-
-.contract-section p {
-  font-size: 1.2em;
-  word-break: break-word;
-}
-
-/* Buttons */
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #00ff00;
-  color: #000;
-  border: none;
-  border-radius: 5px;
+  overflow: hidden;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #003300;
-  color: #fff;
+.video-thumbnail video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Modal */
@@ -228,9 +213,9 @@ button:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 200;
   justify-content: center;
   align-items: center;
+  z-index: 300;
 }
 
 .modal-content {
@@ -238,14 +223,28 @@ button:hover {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  color: #00ff00;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  max-width: 600px;
+  width: 90%;
 }
 
-.modal-content .close {
-  float: right;
-  font-size: 1.5em;
+.modal-content video {
+  width: 100%;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
+.modal .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.modal .close-modal:hover {
+  color: #00ff00;
 }
 
 /* Footer */
