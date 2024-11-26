@@ -53,4 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
       thumbnail.style.display = "none";
     });
   });
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-in');
+  
+    function checkVisibility() {
+      fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.8) {
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+      });
+    }
+  
+    // Chama a função ao carregar a página
+    checkVisibility();
+  
+    // Chama a função ao rolar a página
+    window.addEventListener('scroll', checkVisibility);
+  });
   
