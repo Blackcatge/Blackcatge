@@ -66,7 +66,13 @@ header .twitter-icon {
 
 /* Main Section */
 main {
-  padding-top: 100px;
+  padding-top: 120px; /* Adiciona espaço para o banner */
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 150px; /* Ajuste maior em celulares */
+  }
 }
 
 /* About Section */
