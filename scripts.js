@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
       thumbnail.style.display = "none";
     });
   });
-document.addEventListener('DOMContentLoaded', function () {
+
+  document.addEventListener('DOMContentLoaded', function () {
     const fadeElements = document.querySelectorAll('.fade-in');
   
     function checkVisibility() {
@@ -73,4 +74,27 @@ document.addEventListener('DOMContentLoaded', function () {
     // Chama a função ao rolar a página
     window.addEventListener('scroll', checkVisibility);
   });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".rotating-images video");
+  
+    function handleScroll() {
+      videos.forEach((video) => {
+        const rect = video.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+  
+        // Adiciona ou remove a classe fade-out dependendo da posição do vídeo
+        if (rect.top < 0 || rect.bottom > windowHeight) {
+          video.classList.add("fade-out");
+        } else {
+          video.classList.remove("fade-out");
+        }
+      });
+    }
+  
+    // Executa ao rolar a página
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Garante que seja chamado ao carregar a página
+  });
+  
   
